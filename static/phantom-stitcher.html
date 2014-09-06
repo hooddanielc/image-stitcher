@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Phantom Stitcher</title>
+  <meta name="description" content="Static web page used by phantom-stitcher.js">
+  <meta name="author" content="Daniel Hood">
+</head>
+<body>
+  <script type="text/javascript">
+    function log(msg) {
+      var req = new XMLHttpRequest();
+      req.open("get", "/log/" + encodeURIComponent(msg), true);
+      req.send();
+    }
+
+    function loadImages(count) {
+      for (var i = 0; i < count; ++i) {
+        (function (idx) {
+          var req = new XMLHttpRequest();
+          req.open("get", "/get-image/" + idx, true);
+
+          req.onload = function() {
+            log("HAHA");
+          };
+
+          log("sending");
+          req.send();
+        })(i);
+      }
+    }
+  </script>
+  <canvas></canvas>
+</body>
+</html>

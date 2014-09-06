@@ -1,0 +1,35 @@
+{
+  "name": "image-stitcher",
+  "version": "0.0.0",
+  "description": "A module that can stitch images together",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hooddanielc/image-stitcher.git"
+  },
+  "keywords": [
+    "image",
+    "stitcher",
+    "graphics",
+    "combine",
+    "stitch",
+    "together",
+    "images"
+  ],
+  "author": "Daniel Hood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hooddanielc/image-stitcher/issues"
+  },
+  "homepage": "https://github.com/hooddanielc/image-stitcher",
+  "dependencies": {
+    "phantom": "^0.6.5",
+    "express": "^4.8.8"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1"
+  }
+}
